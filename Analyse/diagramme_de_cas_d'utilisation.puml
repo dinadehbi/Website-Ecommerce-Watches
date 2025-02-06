@@ -5,10 +5,7 @@ actor Administrateur
 
 rectangle "Montres_ecommerce" {
   usecase "Parcourir les montres" as UC_Browse
-  usecase "Rechercher des montres" as UC_Search
-  usecase "Ajouter au panier" as UC_AddCart
-  usecase "Voir le panier" as UC_ViewCart
-  usecase "Passer à la caisse" as UC_Checkout
+  usecase "Paiment" as UC_Checkout
   usecase "Passer commande" as UC_Order
   usecase "Laisser un avis" as UC_Review
   usecase "Gérer les produits" as UC_ManageProducts
@@ -17,9 +14,6 @@ rectangle "Montres_ecommerce" {
 }
 
 Client -- UC_Browse
-Client -- UC_Search
-Client -- UC_AddCart
-Client -- UC_ViewCart
 Client -- UC_Checkout
 Client -- UC_Order
 Client -- UC_Review

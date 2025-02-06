@@ -1,16 +1,15 @@
-@startuml Watches_ecommerce
+@startuml Sprint2_Montres_ecommerce
 left to right direction
-actor Customer
-actor Admin
+actor Client
+actor Administrateur
 
-usecase "Add to Cart" as UC_AddCart
-usecase "View Cart" as UC_ViewCart
-usecase "Checkout" as UC_Checkout
-usecase "Manage Users" as UC_ManageUsers
+rectangle "Sprint 2" {
+  usecase "Paiement" as UC_Checkout
+  usecase "Laisser un avis" as UC_Review
+  usecase "Gérer les utilisateurs" as UC_ManageUsers
+}
 
-Customer --> UC_AddCart
-Customer --> UC_ViewCart
-Customer --> UC_Checkout
-
-Admin --> UC_ManageUsers
+Client -- UC_Checkout
+Client -- UC_Review
+Administrateur -- UC_ManageUsers
 @enduml
